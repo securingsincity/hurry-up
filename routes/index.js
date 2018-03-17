@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     const collection = db.collection('games')
     return collection.find().toArray()
   }).then((games) => {
-    res.render('index', { title: 'Express', games });
+    res.render('index.html', { title: 'Express', games });
   })
 });
 
