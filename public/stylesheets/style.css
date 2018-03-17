@@ -1,4 +1,9 @@
 
+$font-family-sans-serif: 'Zilla Slab', 'sans-serif'; 
+$navbar-default-link-color: white;
+$navbar-height: 60px;
+$navbar-text-size: 40px;
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -8,8 +13,12 @@ a {
   color: #00B7FF;
 }
 
-button {
-	padding: 20px;
-	border-radius: 10px;
+.center {
+	text-align: center;
 }
 
+.navbar {
+	font-weight: bold;
+	color: white;
+	background-color: rgb(3, 13, 135);
+} 
