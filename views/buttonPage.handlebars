@@ -1,7 +1,0 @@
-extends layout
-
-block content
-	h1= id
-	p= buttonWasLastPressed ? buttonWasLastPressed : ""
-	form(method='post' action='/buttonPage/' + id)
-		button  Hurry up
