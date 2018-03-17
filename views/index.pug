@@ -3,9 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  ul 
-    li 
-      a(href="/buttonPage/cleveland-boston-3-17" ) Cleveland Indians vs Boston Red Sox
-    li 
-      a(href="/buttonPage/newyork-sandiego-3-17" ) New York Yankess vs San Diego Padres
+  ul
+    each game in games
+      li
+        a(href="/buttonPage/" + game.id ) #{game.away.market} #{game.away.name} vs #{game.home.market} #{game.home.name}
 

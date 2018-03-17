@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	h1= id
+	h1 #{game.away.market} #{game.away.name} vs #{game.home.market} #{game.home.name}
 	p= buttonWasLastPressed ? buttonWasLastPressed : ""
-	form(method='post' action='/buttonPage/' + id)
+	form(method='post' action='/buttonPage/' + game.id )
 		button  Hurry up
