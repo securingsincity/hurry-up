@@ -3,7 +3,7 @@ var router = express.Router();
 const mongo =  require('../utils/mongo.js')
 /* GET home page. */
 router.get('/:id', function(req, res, next) {
-  res.render('buttonPage', { title: 'Express', id: req.params.id, buttonWasLastPressed: null });
+  res.render('buttonPage.handlebars', { title: 'Express', id: req.params.id, buttonWasLastPressed: null });
 });
 
 router.post('/:id', function(req, res, next) {
@@ -17,7 +17,7 @@ router.post('/:id', function(req, res, next) {
 	})
 	.then(() => {	
 		console.log(`Button Pressed: ${date}`)
-		res.render('buttonPage',{ title: 'Express', id: req.params.id, buttonWasLastPressed: date })
+		res.render('buttonPage.handlebars',{ title: 'Express', id: req.params.id, buttonWasLastPressed: date })
 	})
 });
 
