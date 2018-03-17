@@ -8,7 +8,7 @@ router.get('/:id', function (req, res, next) {
 		return gameCollection.findOne({id: req.params.id})
 	}).then((game) => {
 		if (game) {
-			res.render('buttonPage.html', { title: 'Express', id: req.params.id, game, buttonWasLastPressed: null });
+			res.render('buttonPage.html', { title: 'Express', id: req.params.id, game, buttonWasLastPressed: 1 });
 		} else {
 			res.json({status: 'oh no'})
 		}
@@ -31,7 +31,7 @@ router.post('/:id', function(req, res, next) {
 			return gameCollection.findOne({ id: req.params.id })
 		}).then((game) => {
 			if (game) {
-				res.render('buttonPage', { title: 'Express', id: req.params.id, game, buttonWasLastPressed: date });
+				res.render('buttonPage.html', { title: 'Express', id: req.params.id, game, buttonWasLastPressed: date });
 			} else {
 				res.json({ status: 'oh no' })
 			}
